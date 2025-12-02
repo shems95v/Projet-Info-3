@@ -10,5 +10,4 @@ typedef struct {
     double volume_reel;
 } Usine;
 
-void afficher_usine (Usine u);
 #endif
