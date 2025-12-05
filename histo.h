@@ -7,7 +7,7 @@ typedef struct {
     char id[50];
     double capacite_max;
     double volume_source;
-    double volume_reel;
+    long volume_reel;
 } Usine;
 
 #endif
