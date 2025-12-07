@@ -1,12 +1,12 @@
-CC = GCC
+CC = gcc
 
 SRC = main.c lireCSV.c gestion_usine.c calcul_histo.c
 
-BIN = projet.sh
+BIN = projet_wildwater
 
 all: $(BIN)
-$(BIN) = $(SRC)
-$(CC) $(SRC) -o $(BIN)
 
+$(BIN) : $(SRC)  
+  $(CC) $(SRC) -o $(BIN)
 clean:
-rm-f $(BIN)
+  rm -f $(BIN)
