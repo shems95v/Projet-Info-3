@@ -1,7 +1,7 @@
 #ifndef ANALYSE_H
 #define ANALYSE_H
 
-//6 types de lignes possibles dans le fichier CSV
+// types de lignes dans le fichier CSV
 
 typedef enum {
     T_SRC_USINE,        // source → usine
