@@ -1,6 +1,6 @@
 CC = gcc
 
-SRC = main.c lireCSV.c gestion_usine.c calcul_histo.c
+SRC = main.c lireCSV.c gestion_usine.c calcul_histo.c analyse.c
 
 BIN = projet_wildwater
 
