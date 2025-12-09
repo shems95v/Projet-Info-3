@@ -13,7 +13,7 @@ typedef struct Arbre {
 } Arbre;
 
 // Fonction qui lit une ligne CSV et remplit une structure Usine
-int analayseLigne(const char *line, Usine *out);
+int analyseLigne(const char *line, Usine *out);
 
 // Ajout d'une usine dans l'arbre binaire (ordre alphabétique)
 Arbre* insererUsine(Arbre *root, Usine u);
