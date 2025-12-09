@@ -11,13 +11,13 @@ typedef enum {
     T_JONCTION_SERVICE, // jonction → raccordement
     T_SERVICE_USAGER,   // raccordement → usager
     T_INCONNU           // ligne invalide
-} TypeTroncon;
+} Troncon;
 
 // Structure représentant une ligne du fichier CSV
 
 typedef struct {
 
-    TypeTroncon type;
+    Troncon type;
 
     char *id_usine;     // colonne 1 (ou "-")
     char *id_amont;     // colonne 2
