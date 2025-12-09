@@ -1,36 +1,27 @@
 #ifndef ANALYSE_H
 #define ANALYSE_H
 
-// types de lignes dans le fichier CSV
-
-typedef enum {
-    T_SRC_USINE,        // source → usine
-    T_USINE_SEULE,      // ligne décrivant uniquement une usine
-    T_USINE_STOCK,      // usine → stockage
-    T_STOCK_JONCTION,   // stockage → jonction
-    T_JONCTION_SERVICE, // jonction → raccordement
-    T_SERVICE_USAGER,   // raccordement → usager
-    T_INCONNU           // ligne invalide
-} Troncon;
-
-// Structure représentant une ligne du fichier CSV
-
 typedef struct {
+    char nom[100];      // Nom de l'usine
+    long volume_reel;   // Volume réel traité
+} Usine;
 
-    Troncon type;
+typedef struct Arbre {
+    Usine u;               // Données de l'usine
+    struct Arbre *fg;      // Fils gauche
+    struct Arbre *fd;      // Fils droit
+} Arbre;
 
-    char *id_usine;     // colonne 1 (ou "-")
-    char *id_amont;     // colonne 2
-    char *id_aval;      // colonne 3
+// Fonction qui lit une ligne CSV et remplit une structure Usine
+int analayseLigne(const char *line, Usine *out);
 
-    float volume;       // colonne 4 (ou "-")
-    float fuite;        // colonne 5 (ou "-")
-} Troncon;
+// Ajout d'une usine dans l'arbre binaire (ordre alphabétique)
+Arbre* insererUsine(Arbre *root, Usine u);
 
-// Fonction principale du module analyse
-int analyseLigne(const char *line, Troncon *out);
+// Affiche l'arbre (infixe)
+void afficherArbre(Arbre *root);
 
-// Libération des champs alloués dynamiquement
-void freeTroncon(Troncon *t);
+// Libère toute la mémoire
+void freeArbre(Arbre *root);
 
 #endif
