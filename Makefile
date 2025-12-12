@@ -6,9 +6,9 @@ EXEC = wildwater
 
 all: $(EXEC)
 
-$(EXEC) : $(OBJ)  
+$(EXEC): $(OBJ)  
   $(CC) $(CFLAGS) -o $(EXEC) $(OBJ)
 %.o: %.c
-  $(CC) $(CFLAGS) -c $< -o $
+  $(CC) $(CFLAGS) -c $< -o $@
 clean:
   rm -f $(OBJ) $(EXEC)
