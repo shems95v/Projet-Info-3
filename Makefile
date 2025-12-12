@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
-SRC = main.c 
+SRC = main.c analyse.c analyse_CSV.c
 OBJ = $(SRC:.c=.o)
 EXEC = wildwater
 
