@@ -1,12 +1,14 @@
 CC = gcc
+CFLAGS = -Wall -Wextra -std=c11
+SRC = main.c analyse.c analyse_CSV.c
+OBJ = $(SRC:.c=.o)
+EXEC = wildwater
 
-SRC = main.c gestion_usine.c calcul_histo.c analyse.c
+all: $(EXEC)
 
-BIN = projet_wildwater
-
-all: $(BIN)
-
-$(BIN) : $(SRC)  
-  $(CC) $(SRC) -o $(BIN)
+$(EXEC) : $(OBJ)  
+  $(CC) $(CFLAGS) -o $(EXEC) $(OBJ)
+%.o: %.c
+  $(CC) $(CFLAGS) -c $< -o $
 clean:
-  rm -f $(BIN)
+  rm -f $(OBJ) $(EXEC)
