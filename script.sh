@@ -64,8 +64,8 @@ fi
 RET=$? 
 
 if [ $RET -ne 0 ]; then
-echo "Erreur: Le programme C a echoue" 
-exit 1
+ echo "Erreur: Le programme C a echoue" 
+ exit 1
 fi
 
 #Calcul de la duree totale en millisecondes
