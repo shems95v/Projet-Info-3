@@ -2,12 +2,16 @@
 #define ANALYSE_H
 
 typedef struct {
-    char nom[100];      // Nom de l'usine
-    long volume_reel;   // Volume réel traité
+    char id[64];              // Identifiant de l'usine
+    long capacite_max;        // Capacité maximale 
+    long volume_source;       // Volume total capté depuis les sources
+    long volume_reel;         // Volume réel traité 
 } Usine;
 
+// Arbre AVL pour stocker les usines
 typedef struct Arbre {
     Usine u;               // Données de l'usine
+    int hauteur;              // Hauteur du noeud (AVL)
     struct Arbre *fg;      // Fils gauche
     struct Arbre *fd;      // Fils droit
 } Arbre;
