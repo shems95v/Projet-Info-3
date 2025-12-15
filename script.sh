@@ -16,7 +16,7 @@ OPTION="$3"    # max/src/real ou id usine
 
  #Verification de lexistence du fichier
  
- if [ ! -f "$DATAFILE" ] then
+ if [ ! -f "$DATAFILE" ]; then
   echo " Erreur : fichier '$DATAFILE' introuvable "
   exit 1
  fi
