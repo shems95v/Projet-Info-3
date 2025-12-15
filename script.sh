@@ -2,7 +2,6 @@
 
 START=$(date +%s)
 
-chmod +x script.sh
 #Verification du nombre darguments
 
 if [$# -ne 3 ]; then
