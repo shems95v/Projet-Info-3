@@ -4,7 +4,7 @@ START=$(date +%s)
 
 #Verification du nombre darguments
 
-if [$# -ne 3 ]; then
+if [ $# -ne 3 ]; then
  echo "Erreur : nombre darguments incorrect"
  exit 1
 fi
@@ -16,7 +16,7 @@ OPTION="$3"    # max/src/real ou id usine
 
  #Verification de lexistence du fichier
  
- if [! -f "$DATAFILE" ] then
+ if [ ! -f "$DATAFILE" ] then
   echo " Erreur : fichier '$DATAFILE' introuvable "
   exit 1
  fi
