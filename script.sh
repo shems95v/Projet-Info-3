@@ -74,20 +74,20 @@ if [ ! -f "histo.dat" ]; then
     exit 1
 fi
 
-# TRI ET EXTRACTION TOP 10 / BOTTOM 50
+# Tri
 
 
 SORTED="sorted_by_value.dat"
 TOP10="top10.dat"
 BOTTOM50="bottom50.dat"
 
-# Tri décroissant par valeur
+# Tri decroissant par valeur
 LC_ALL=C sort -t ';' -k 2,2nr histo.dat > "$SORTED"
 
 # Top 10 plus grandes usines
 head -n 10 "$SORTED" > "$TOP10"
 
-# Bottom 50 plus petites usines (re-triées dans le bon sens)
+# 50 plus petites usines
 tail -n 50 "$SORTED" | sort -t ';' -k 2,2n > "$BOTTOM50"
 
 
