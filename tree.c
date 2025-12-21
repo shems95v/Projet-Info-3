@@ -5,9 +5,7 @@
 
 #define TAILLE_MAX_LIGNE 1024
 
-// Fonctions utilitaires
 
-// Fonction pour calculer le maximum entre deux entiers
 int maximum_entier(int a, int b) {
     if (a > b) {
         return a;
@@ -37,7 +35,7 @@ NoeudAVLArbre* arbre_avl_rotation_droite(NoeudAVLArbre *y) {
     NoeudAVLArbre *x = y->gauche;
     NoeudAVLArbre *t2 = x->droite;
     
-    // Rotation
+   
     x->droite = y;
     y->gauche = t2;
     
@@ -53,7 +51,7 @@ NoeudAVLArbre* arbre_avl_rotation_gauche(NoeudAVLArbre *x) {
     NoeudAVLArbre *y = x->droite;
     NoeudAVLArbre *t2 = y->gauche;
     
-    // Rotation
+  
     y->gauche = x;
     x->droite = t2;
     
@@ -255,7 +253,7 @@ double calculer_fuites_recursif(NoeudArbre *noeud) {
     return fuite_locale + fuites_enfants;
 }
 
-// Calculer les fuites totales de l'arbre
+// Calcul des fuites totales de l'arbre
 double calculer_fuites_totales(NoeudArbre *racine) {
     if (racine == NULL) {
         return -1;
