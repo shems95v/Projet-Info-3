@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Script principal pour le traitement des données d'usines
 
 #Récupération des arguments
 DATA_FILE=$1
