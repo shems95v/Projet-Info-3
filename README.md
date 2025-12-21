@@ -61,6 +61,7 @@ Modes possibles :
 - max
 - src
 - real
+- all (pour le bonus)
 
 Résultats obtenus :
 - un fichier .dat contenant les données intermédiaires
@@ -79,6 +80,7 @@ Résultat obtenu :
 - un fichier .dat contenant pour chaque usine :
 - son identifiant
 - le pourcentage de fuites associé
+- les identifiants amont et aval du tronçon qui perd le plus d’eau
 
 ----------------------------------------------------------------
 
