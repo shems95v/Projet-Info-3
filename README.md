@@ -1,5 +1,7 @@
 # 🌊 C-WildWater — Analyse de données industrielles en C
 
+Nous avons deux branches sur Github: une qui se nomme **main** qui contient tous les fichiers du projet **sans le Bonus** et une autre qui se nomme **Bonus** qui contient tous les fichiers du projet **avec le Bonus**
+
 ## Présentation du projet
 
 Ce projet a été réalisé en langage C dans le but d’analyser des données industrielles
@@ -61,6 +63,7 @@ Modes possibles :
 - max
 - src
 - real
+- all (pour le bonus)
 
 Résultats obtenus :
 - un fichier .dat contenant les données intermédiaires
@@ -79,6 +82,7 @@ Résultat obtenu :
 - un fichier .dat contenant pour chaque usine :
 - son identifiant
 - le pourcentage de fuites associé
+- les identifiants amont et aval du tronçon qui perd le plus d’eau (pour le bonus)
 
 ----------------------------------------------------------------
 
