@@ -115,6 +115,6 @@ Le programme fonctionne selon les étapes suivantes :
 Projet réalisé par :  
 **Taissir RGUIG**, **Shems BOUDJEBINA**, **Sara BELGHAZI**
 
-Dans le cadre du module **INFORMATIQUE en C** — année universitaire **2025–2026**.
+Dans le cadre du projet d'informatique 3 — année universitaire **2025–2026**.
 
 
