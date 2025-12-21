@@ -17,7 +17,7 @@ Usine* creer_usine(const char *identifiant) {
         return NULL;
     }
     
-    // Copie de la chaîne d'identifiant avec strcpy
+    // Copie de la chaîne d'identifiant 
     strcpy(u->identifiant, identifiant);
     
     // Initialisation des volumes max/src puis réel
